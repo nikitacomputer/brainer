@@ -5,21 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brainer</title>
-    <style src="./style.css"></style>
-  <script defer src="index.bundle.js"></script><script defer src="print.bundle.js"></script></head>
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="print.bundle.js"></script></head>
 
   <body class="body">
-      <div class="header-box">
-       <h2 class="header-block">Brainer</h2>
-      </div>
-      <div class="main-block">
-        <div class="given-word"></div>
-        <div class="play-area"></div>
-      </div>
-      <div class="keyboard">
-        <div class="key"></div>
-      </div>
+    <div class="main-grid-container">
+      <div class="grid-block header">
+        <div class="menu-button">
+          <div class="menu-icon">
+            <div class="menu-icon-stripe"></div>
+            <div class="menu-icon-stripe"></div>
+            <div class="menu-icon-stripe"></div>
 
+          </div>
+        </div>
+        <h2 class="title title-logo">BRAINER</h2>
+        <h3 class="title title-slogan">daily word challenge</h3>
+      </div>
+      <div class="grid-block play-area">
+        <div class="given-word">
+          <div class="letter-box">C</div>
+          <div class="letter-box">O</div>
+          <div class="letter-box">M</div>
+          <div class="letter-box">P</div>
+          <div class="letter-box">L</div>
+          <div class="letter-box">A</div>
+          <div class="letter-box">I</div>
+          <div class="letter-box">N</div>
+        </div>
+        <div class="user-words">
+          <div class="user-word">MAP</div>
+          <div class="user-word">PALM</div>
+          <div class="user-word">PLAN</div>
+          <div class="user-word">PLAIN</div>
+        </div>
+        <div class="dashboard">
+          <div class="dash-block dash-block_score"></div>
+          <div class="dash-block dash-block_mix"></div>
+
+        </div>
+      </div>
+      <div class="grid-block keyboard">
+        <div class="keyboard-row key-row-1">
+          <div id="key_q" class="keyboard-key keyboard-key__enabled">Q</div>
+          <div id="key_w" class="keyboard-key keyboard-key__enabled">W</div>
+          <div id="key_e" class="keyboard-key keyboard-key__enabled">E</div>
+          <div id="key_r" class="keyboard-key keyboard-key__enabled">R</div>
+          <div id="key_t" class="keyboard-key keyboard-key__enabled">T</div>
+          <div id="key_y" class="keyboard-key keyboard-key__enabled">Y</div>
+          <div id="key_u" class="keyboard-key keyboard-key__enabled">U</div>
+          <div id="key_i" class="keyboard-key keyboard-key__enabled">I</div>
+          <div id="key_o" class="keyboard-key keyboard-key__enabled">O</div>
+          <div id="key_p" class="keyboard-key keyboard-key__enabled">P</div>
+        </div>
+        <div class="keyboard-row key-row-2">
+          <div id="key_a" class="keyboard-key keyboard-key__enabled">A</div>
+          <div id="key_s" class="keyboard-key keyboard-key__enabled">S</div>
+          <div id="key_d" class="keyboard-key keyboard-key__enabled">D</div>
+          <div id="key_f" class="keyboard-key keyboard-key__enabled">F</div>
+          <div id="key_g" class="keyboard-key keyboard-key__enabled">G</div>
+          <div id="key_h" class="keyboard-key keyboard-key__enabled">H</div>
+          <div id="key_j" class="keyboard-key keyboard-key__enabled">J</div>
+          <div id="key_k" class="keyboard-key keyboard-key__enabled">K</div>
+          <div id="key_l" class="keyboard-key keyboard-key__enabled">L</div>
+        </div>
+        <div class="keyboard-row key-row-3">
+          <div id="key_enter" class="keyboard-key keyboard-key_util">ENTER</div>
+          <div id="key_z" class="keyboard-key keyboard-key__enabled">Z</div>
+          <div id="key_x" class="keyboard-key keyboard-key__enabled">X</div>
+          <div id="key_c" class="keyboard-key keyboard-key__enabled">C</div>
+          <div id="key_v" class="keyboard-key keyboard-key__enabled">V</div>
+          <div id="key_b" class="keyboard-key keyboard-key__enabled">B</div>
+          <div id="key_n" class="keyboard-key keyboard-key__enabled">N</div>
+          <div id="key_m" class="keyboard-key keyboard-key__enabled">M</div>
+          <div id="key_delete" class="keyboard-key keyboard-key_util keyboard-key_delete">x</div>
+       </div>
+
+
+      </div>
+    </div>
   </body>
 
 </html>
