@@ -65,7 +65,11 @@
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 20% 65% 15%;
-  grid-template-areas: "word word";
+  grid-template-areas:
+  "word word"
+  "list dash"
+  "input dash"
+  ;
 
 }
 
@@ -96,6 +100,7 @@
 }
 
 .user-word-list {
+  grid-area: list;
   display: grid;
   grid-auto-flow: row;
 
@@ -109,11 +114,50 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 600;
 
+}
+
+
+.dash {
+  grid-area: dash;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
 
 }
 
 
+.dash-block {
+  grid-area: dash;
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
 
+}
+
+.dash-content {
+  margin: 15px auto;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.dash-block_score {
+  background-color: #e89788;
+  border: 2px solid #e89788
+
+}
+
+.dash-block_mix {
+  border: 2px solid black;
+  color: gray;
+}
+.dash-block_mix__enabled {
+  background-color: black;
+}
 
 
 
