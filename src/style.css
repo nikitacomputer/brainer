@@ -3,12 +3,12 @@
 
 .body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   padding: 0;
   margin: 0;
   position: absolute;
   background-color: white;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .main-grid-container {
@@ -24,7 +24,7 @@
 
 .grid-block {
   background-color: #f73b39;
-  border: 5px solid black;
+  border: 5px solid #e89788;
 }
 
 .menu-button {
@@ -63,6 +63,62 @@
 
 .play-area {
   display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 65% 15%;
+  grid-template-areas: "word word";
+
+}
+
+.grid-cell {
+  border: 1px solid black;
+}
+
+.given-word {
+  grid-area: word;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2px;
+  margin: auto ;
+  max-width: 500px;
+  border: 1px solid black;;
+}
+
+
+.letter-box {
+  min-height: 30px;
+  min-width: 30px;
+  height: 5%;
+  width: 5%;
+  text-align: center;
+  font-size: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #e89796;
+}
+
+.user-word-list {
+  display: grid;
+  grid-auto-flow: row;
+
+}
+
+.user-word {
+  border: 1px solid black;
+  text-align: left;
+
+  text-transform:uppercase;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+
+
+}
+
+
+
+
+
+
+/* .play-area {
+  display: grid;
 
   grid-template-rows: 20% 80%;
   grid-auto-rows: minmax(70px, auto);
@@ -78,6 +134,9 @@
   grid-gap: 2px;
   margin: auto ;
   max-width: 500px;
+  width: 90%;
+  border: 1px solid black;;
+
 }
 
 .letter-box {
@@ -88,7 +147,6 @@
   text-align: center;
   font-size: 40px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding-top: ;
 
   background-color: #e89796;
 }
@@ -122,13 +180,15 @@ font-weight: 600;
   width: 120px;
   margin: 0 auto 5% auto;
 
-}
+} */
 
 .keyboard {
   display: grid;
   grid-template-rows: repeat (3, 1fr) ;
   padding: 5px;
   grid-gap: 5px;
+  height: 140px;
+  margin: 0;
 }
 
 .keyboard-row {
