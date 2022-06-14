@@ -232,17 +232,44 @@
 }
 
 .keyboard-key {
+  display: flex;
+  flex-direction: column;
+
   border: 3px solid #e89796;
   border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.light-box {
+  width: auto;
+  height: 10px;
+  border: 1px solid black;
+}
+
+.letter {
+  border: 1px solid black;
+  line-height: 20px;
+  margin-bottom: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
   text-align: center;
-  padding-top: 15px;
   color: #e89796;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.letter__enabled {
+  color: black;
 }
 
 .keyboard-key_util {
   border: 3px solid black;
   color: black;
+  font-size: 15px;
+
+
 }
 
 .keyboard-key__enabled {
