@@ -1,14 +1,24 @@
 @import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
 
 
 .body {
   width: 100vw;
-  height: 100vh;
+  height: ;
   padding: 0;
   margin: 0;
   position: absolute;
   background-color: white;
   overflow: hidden;
+}
+
+.logo {
+  background-image: url(./assets/graphics/logo.png );
+  background-size: contain;
+  width: 300px;
+  height: 100px ;
+  margin:  auto;
+  position: relative;;
 }
 
 .main-grid-container {
@@ -23,8 +33,8 @@
 }
 
 .grid-block {
-  background-color: #f73b39;
-  border: 5px solid black;
+  background-color: #639B80;
+  border: 4px double #000000;
 }
 
 .menu-button {
@@ -64,71 +74,147 @@
 .play-area {
   display: grid;
 
-  grid-template-rows: 20% 80%;
-  grid-auto-rows: minmax(70px, auto);
   grid-template-columns: 60% 40%;
-  grid-template-areas: "word word";
+  grid-template-rows: 20% 65% 15%;
 
+  grid-template-areas:
+  "word word"
+  "list dash"
+  "input dash"
+  ;
+
+}
+
+.grid-cell {
 }
 
 .given-word {
   grid-area: word;
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-auto-flow: column;
   grid-gap: 2px;
   margin: auto ;
   max-width: 500px;
 }
 
+
 .letter-box {
   min-height: 30px;
   min-width: 30px;
-  height: 5vw;
-  width: 5vw;
-  text-align: center;
-  font-size: 40px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding-top: ;
+  height: 5vh;
+  width: 5vh;
 
-  background-color: #e89796;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e7d3d3;
+  font-weight: 300;
+  font-size: 230%;
+  line-height: 33px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.user-words {
+.user-word-list {
+  grid-area: list;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: row;
+  overflow: scroll;
+
+}
+
+.user-word-list::-webkit-scrollbar {
+  display: none;
 }
 
 .user-word {
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-weight: 600;
-  font-size: 400% ;
-  line-height: 100%;
-  border: 1px solid red;;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  max-height: 100px;
+  /* border-bottom: 2px solid #e7d3d3; */
+  margin-left: 10px;
+  min-height: 30px;
+
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 40px ;
+  line-height: 28px;
+  text-align: left;
+  text-transform:uppercase;
+  letter-spacing: -5px;
 }
 
-.dashboard {
+.input {
+  min-height: 50px;
   display: flex;
-  flex-direction: row;
-  flex-flow: column-reverse;
+  justify-content: end;
+  flex-direction: column;
+
 }
+
+.input-block {
+  height: auto ;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  align-self: baseline;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.dash {
+  grid-area: dash;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+
+}
+
 
 .dash-block {
-  border: 4px solid black;
-  height: 40px;
-  width: 120px;
-  margin: 0 auto 5% auto;
+  grid-area: dash;
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.dash-content {
+  margin: 15px auto;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.dash-block_score {
+  background-color: #e7d3d3;
+  border: 2px solid #e7d3d3;
 
 }
+
+.dash-block_mix {
+  border: 2px solid black;
+  color: rgb(179, 165, 165);
+}
+.dash-block_mix__enabled {
+  background-color: black;
+}
+
 
 .keyboard {
   display: grid;
   grid-template-rows: repeat (3, 1fr) ;
   padding: 5px;
   grid-gap: 5px;
+  height: auto;
+  margin: 0;
 }
 
 .keyboard-row {
@@ -156,22 +242,83 @@ font-weight: 600;
 }
 
 .keyboard-key {
-  border: 3px solid #e89796;
+  display: flex;
+  flex-direction: column;
+
+  border: 3px solid #648a7e;
   border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  height: 42px;
+}
+
+.light-box {
+  width: auto;
+  height: 10px;
+}
+
+.light {
+  height: 3px;
+  width: 3px;
+  border: 1px solid rgb(255, 215, 215);
+  border-radius: 4px;
+  border-style:inset;
+  margin: auto;
+  margin-top: 4px;
+
+  background-color: white;
+}
+
+.light__used {
+  background-color: rgb(255, 128, 128);
+  border-color: #d10808;
+
+
+}
+
+.light__off {
+  background-color: rgb(53, 51, 51);
+  border-color: #8b8685;
+}
+
+.letter {
+  line-height: 30px;
+  margin-bottom: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
   text-align: center;
-  padding-top: 15px;
-  color: #e89796;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #46776c;
+}
+
+.letter__enabled {
+  color: rgb(255, 255, 255);
 }
 
 .keyboard-key_util {
-  border: 3px solid black;
-  color: black;
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(196, 177, 177);
+  background-color: #000000;
+  border-radius: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  padding-left: 7px;
+  margin: ;
+}
+
+.keyboard-key_delete {
+  font-size: 12.5px;
+  padding-left: 1px;
+
+
 }
 
 .keyboard-key__enabled {
-  border: 3px solid black;
-  color: black;
+  border: 3px solid rgb(233, 215, 215);
+  color: rgb(255, 255, 255);
 }
 
 
