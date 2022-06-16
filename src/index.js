@@ -2,14 +2,26 @@ require("./style.css");
 require('./assets/graphics/logo.png');
 
 //entry point for the given word
-const givenWord = 'complain';
+//
+//
+//
+const givenWord = 'gnome';
 const givenWordArray = givenWord.split('');
 
 //getting givenWord element
 const givenWordElement = document.querySelector('.given-word');
 
-//filling the given word
 
+
+
+
+
+
+
+//filling the given word
+//
+//
+//
 function populateGivenWord (array) {
 
 //removes all letters to refresh
@@ -24,9 +36,20 @@ function populateGivenWord (array) {
   });
 }
 
+//calling the populator
+populateGivenWord(givenWordArray);
+
+
+
+
+
+
 
 
 //shuffle letter boxes
+//
+//
+//
 function shuffleLetters (parento) {
   var parent = (parento);
   var divs = parent.children;
@@ -40,15 +63,17 @@ function shuffleLetters (parento) {
 }
 
 
-//calling the populator
-populateGivenWord(givenWordArray);
 
 
-//button element and textbox element
+
+
+
+//button element and mix element
+//
+//
+//
 const mixButton = document.querySelector(".dash-block_mix");
 const mixConent = document.querySelector(".dash-content_mix");
-
-
 
 //toggle button color and text
 mixButton.addEventListener('click', () => {
@@ -62,5 +87,61 @@ mixButton.addEventListener('click', () => {
 }
 
 });
+
+
+givenWordArray
+
+//key bahavior
+//
+//
+//
+
+
+const input = document.querySelector('.input-block');//input field
+//activate key
+
+function activateKey (array) {
+    array.forEach(letter => {
+      const key = document.getElementById(`key_${letter}`);
+
+      key.classList.add('keyboard-key__enabled');
+
+      const kids = key.children;
+
+      var kidsArray = Array.from(kids);
+
+      kidsArray.forEach(element => {
+        const getclass = element.classList;
+        element.classList.add(`${getclass}__enabled`);
+        });
+
+      key.addEventListener('click', () => {
+          input.innerHTML += letter;
+      });
+     });
+}
+
+//activate enter and delete
+
+// document.querySelector('.keyboard-key_enter').addEventListener('click', () => {
+
+// });
+
+document.querySelector('.keyboard-key_delete').addEventListener('click', () => {
+  input.innerHTML = input.innerText.slice(0, -1);
+});
+
+
+
+activateKey(givenWordArray);
+
+
+
+
+
+
+
+
+
 
 
