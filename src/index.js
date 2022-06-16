@@ -11,6 +11,9 @@ const givenWordArray = givenWord.split('');
 //getting givenWord element
 const givenWordElement = document.querySelector('.given-word');
 
+const userWordList = document.querySelector('.user-word-list');
+
+
 
 
 
@@ -121,11 +124,28 @@ function activateKey (array) {
      });
 }
 
+activateKey(givenWordArray);
+
+
+
+
+
+
+
+
 //activate enter and delete
-
-// document.querySelector('.keyboard-key_enter').addEventListener('click', () => {
-
-// });
+//
+//
+//
+document.querySelector('.keyboard-key_enter').addEventListener('click', () => {
+  if (input.innerHTML !== "") {
+    const userWord = document.createElement('div');
+    userWord.classList.add('user-word');
+    userWord.textContent = input.innerText;
+    userWordList.appendChild(userWord);
+    input.innerHTML = "";
+  }
+});
 
 document.querySelector('.keyboard-key_delete').addEventListener('click', () => {
   input.innerHTML = input.innerText.slice(0, -1);
@@ -133,7 +153,7 @@ document.querySelector('.keyboard-key_delete').addEventListener('click', () => {
 
 
 
-activateKey(givenWordArray);
+
 
 
 
