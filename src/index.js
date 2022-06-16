@@ -5,6 +5,7 @@ require('./assets/graphics/logo.png');
 //
 //
 //
+const vocab = ['qqq', 'www', 'eee', 'rrr', 'ttt', 'yyy'];
 const givenWord = 'gnome';
 const givenWordArray = givenWord.split('');
 
@@ -138,12 +139,15 @@ activateKey(givenWordArray);
 //
 //
 document.querySelector('.keyboard-key_enter').addEventListener('click', () => {
-  if (input.innerHTML !== "") {
+  if (input.innerHTML !== "" &&
+      vocab.includes(input.innerHTML)) {
     const userWord = document.createElement('div');
     userWord.classList.add('user-word');
     userWord.textContent = input.innerText;
     userWordList.appendChild(userWord);
     input.innerHTML = "";
+  } else {
+    //animation
   }
 });
 
