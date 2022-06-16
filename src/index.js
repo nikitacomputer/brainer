@@ -5,16 +5,18 @@ require('./assets/graphics/logo.png');
 //
 //
 //
-const vocab = ['qqq', 'www', 'eee', 'rrr', 'ttt', 'yyy'];
-const givenWord = 'gnome';
+const vocab = ['qqq', 'wwww', 'eeeee', 'rrrrrr', 'ttttttt', 'yyyyyyyy', 'uuuuuuuuu'];
+const givenWord = 'qwertyu';
 const givenWordArray = givenWord.split('');
+const userWordListArray = [];
+var score = 0;
 
 //getting givenWord element
 const givenWordElement = document.querySelector('.given-word');
 
 const userWordList = document.querySelector('.user-word-list');
 
-
+const scoreCounter = document.querySelector('.dash-content_score');
 
 
 
@@ -139,21 +141,59 @@ activateKey(givenWordArray);
 //
 //
 document.querySelector('.keyboard-key_enter').addEventListener('click', () => {
-  if (input.innerHTML !== "" &&
-      vocab.includes(input.innerHTML)) {
-    const userWord = document.createElement('div');
-    userWord.classList.add('user-word');
-    userWord.textContent = input.innerText;
-    userWordList.appendChild(userWord);
-    input.innerHTML = "";
+
+  const inputWord = input.innerHTML;
+
+  if ((inputWord !== "")) {
+    if (!userWordListArray.includes(inputWord)) {
+      if (vocab.includes(inputWord)) {
+        scoreCount(inputWord);
+        const userWord = document.createElement('div');
+        userWord.classList.add('user-word');
+        userWord.textContent = inputWord;
+        userWordList.appendChild(userWord);
+        input.innerHTML = "";
+        userWordListArray.push(inputWord);
+        scoreCounter.innerHTML = score;
+      } else {
+        //error
+       }
+    } else {
+      //error
+    }
   } else {
-    //animation
+    //error
   }
 });
 
+
 document.querySelector('.keyboard-key_delete').addEventListener('click', () => {
   input.innerHTML = input.innerText.slice(0, -1);
+  input.innerHTML = input.innerHTML.toLowerCase( );
 });
+
+
+//point counter
+function scoreCount (word) {
+  if (word.length == 3) {
+    score += 9;
+  } else if (word.length == 4) {
+    score += 16;
+  } else if (word.length == 5) {
+    score += 25;
+  } else if (word.length == 6) {
+    score += 36;
+  } else if (word.length == 7) {
+    score += 49;
+  } else if (word.length == 8) {
+    score += 64;
+  } else if (word.length == 9) {
+    score += 81;
+  }
+console.log(score);
+
+}
+
 
 
 
