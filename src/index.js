@@ -1,6 +1,8 @@
 require("./style.css");
 require('./assets/graphics/logo.png');
 
+
+
 //consts and vars
 //
 //
@@ -12,6 +14,16 @@ const userWordListArray = [];
 var score = 0;
 letters = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
+
+let vh = window.innerHeight * 0.01;
+
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 //element calls
 //
 //

@@ -29,6 +29,7 @@
   grid-template-rows: 110px auto 180px ;
   grid-gap: 5px;
   height:100vh;
+  height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
 }
 
