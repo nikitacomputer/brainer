@@ -1,18 +1,21 @@
 require("./style.css");
 require('./assets/graphics/logo.png');
 
-//entry point for the given word
+//consts and vars
 //
 //
 //
 const vocab = ['qqq', 'wwww', 'eeeee', 'rrrrrr', 'ttttttt', 'yyyyyyyy', 'uuuuuuuuu'];
-const givenWord = 'qwertyu';
+const givenWord = 'aefyjo';
 const givenWordArray = givenWord.split('');
 const userWordListArray = [];
 var score = 0;
 letters = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
-//getting givenWord element
+//element calls
+//
+//
+//
 const givenWordElement = document.querySelector('.given-word');
 
 const userWordList = document.querySelector('.user-word-list');
