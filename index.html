@@ -3,148 +3,160 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1 user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Brainer</title>
+    <style href="/style.css"></style>
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="print.bundle.js"></script></head>
 
   <body class="body">
     <div class="main-grid-container">
+
+
       <div class="grid-block header">
         <div class="logo"></div>
-
       </div>
-      <div class="grid-block play-area"></div>
-      <div class="grid-block keyboard">
+
+      <div class="grid-block challenges">
+        <div class="challenge-button challenge-button__complete challenge-button_word-1">
+          <div class="challenge-button-word word-1">WORD 1</div>
+          <div class="challenge-button-score word-1-score">81</div>
+        </div>
+        <div class="challenge-button challenge-button_word-2">
+          <div class="challenge-button-word word-2">WORD 2</div>
+          <div class="challenge-button-score word-2-score">181</div>
+        </div>
+        <div class="challenge-button challenge-button_word-3">
+          <div class="challenge-button-word word-3">WORD 3</div>
+          <div class="challenge-button-score word-3-score">381</div>
+        </div>
+        <div class="challenge-button challenge-button_word-4">
+          <div class="challenge-button-word word-4">WORD 4</div>
+          <div class="challenge-button-score word-4-score">39</div>
+        </div>
+        <div class="challenge-button challenge-button_word-5">
+          <div class="challenge-button-word word-5">WORD 5</div>
+          <div class="challenge-button-score word-5-score">XUI</div>
+        </div>
+      </div>
+
+      <div class="grid-block main-area main-area__hidden">
+
+        <div class="play-zone">
+
+          <div class="grid-cell given-word"></div>
+
+          <div class="grid-cell user-word-list">
+
+            <div class="user-word"></div>
+
+          </div>
+
+          <div class="grid-cell input">
+            <div class="input-block"></div>
+          </div>
+
+          <div class="grid-cell dash">
+            <div class="dash-block dash-block_score">
+              <div class="dash-content dash-content_score">0</div>
+            </div>
+            <div class="dash-block dash-block_mix ">
+              <div class="dash-content dash-content_mix">MIX</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="grid-block keyboard keyboard__hidden">
         <div class="keyboard-row key-row-1">
           <div id="key_q" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">Q</span>
           </div>
           <div id="key_w" class="keyboard-key ">
-
               <div class="light"></div>
-
             <span class="letter">W</span>
           </div>
           <div id="key_e" class="keyboard-key ">
-
               <div class="light"></div>
-
             <span class="letter">E</span>
           </div>
           <div id="key_r" class="keyboard-key ">
-
               <div class="light"></div>
-
             <span class="letter">R</span>
           </div>
           <div id="key_t" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">T</span>
           </div>
           <div id="key_y" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">Y</span>
           </div>
           <div id="key_u" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">U</span>
           </div>
           <div id="key_i" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">I</span>
           </div>
           <div id="key_o" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">O</span>
           </div>
           <div id="key_p" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">P</span>
           </div>
         </div>
         <div class="keyboard-row key-row-2">
           <div id="key_a" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">A</span>
           </div>
           <div id="key_s" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">S</span>
           </div>
           <div id="key_d" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">D</span>
           </div>
           <div id="key_f" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">F</span>
           </div>
           <div id="key_g" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">G</span>
           </div>
           <div id="key_h" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">H</span>
           </div>
           <div id="key_j" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">J</span>
           </div>
           <div id="key_k" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">K</span>
           </div>
           <div id="key_l" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">L</span>
           </div>
         </div>
         <div class="keyboard-row key-row-3">
           <div id="key_enter" class="keyboard-key keyboard-key_util keyboard-key_enter">ENTER</div>
           <div id="key_z" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">Z</span>
           </div>
           <div id="key_x" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">X</span>
           </div>
           <div id="key_c" class="keyboard-key">
@@ -152,241 +164,26 @@
             <span class="letter">C</span>
           </div>
           <div id="key_v" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">V</span>
           </div>
           <div id="key_b" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">B</span>
           </div>
           <div id="key_n" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">N</span>
           </div>
           <div id="key_m" class="keyboard-key">
-
               <div class="light"></div>
-
             <span class="letter">M</span>
           </div>
           <div id="key_delete" class="keyboard-key keyboard-key_util keyboard-key_delete">DELETE</div>
       </div>
-
     </div>
 
 
-
-    <!-- <div class="main-grid-container">
-      <div class="grid-block header">
-          <div class="menu-button">
-          <div class="menu-icon">
-            <div class="menu-icon-stripe"></div>
-            <div class="menu-icon-stripe"></div>
-            <div class="menu-icon-stripe"></div>
-
-          </div>
-        </div>
-        <div class="logo"></div>
-      </div>
-
-
-
-      <div class="grid-block play-area">
-        <div class="grid-cell given-word">
-
-
-        </div>
-        <div class="grid-cell user-word-list">
-
-        </div>
-        <div class="grid-cell input">
-          <div class="input-block"></div>
-        </div>
-        <div class="grid-cell dash">
-          <div class="dash-block dash-block_score">
-            <div class="dash-content dash-content_score">0</div>
-          </div>
-          <div class="dash-block dash-block_mix ">
-            <div class="dash-content dash-content_mix">MIX</div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="grid-block keyboard">
-        <div class="keyboard-row key-row-1">
-          <div id="key_q" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">Q</span>
-          </div>
-          <div id="key_w" class="keyboard-key ">
-
-              <div class="light"></div>
-
-            <span class="letter">W</span>
-          </div>
-          <div id="key_e" class="keyboard-key ">
-
-              <div class="light"></div>
-
-            <span class="letter">E</span>
-          </div>
-          <div id="key_r" class="keyboard-key ">
-
-              <div class="light"></div>
-
-            <span class="letter">R</span>
-          </div>
-          <div id="key_t" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">T</span>
-          </div>
-          <div id="key_y" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">Y</span>
-          </div>
-          <div id="key_u" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">U</span>
-          </div>
-          <div id="key_i" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">I</span>
-          </div>
-          <div id="key_o" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">O</span>
-          </div>
-          <div id="key_p" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">P</span>
-          </div>
-        </div>
-        <div class="keyboard-row key-row-2">
-          <div id="key_a" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">A</span>
-          </div>
-          <div id="key_s" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">S</span>
-          </div>
-          <div id="key_d" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">D</span>
-          </div>
-          <div id="key_f" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">F</span>
-          </div>
-          <div id="key_g" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">G</span>
-          </div>
-          <div id="key_h" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">H</span>
-          </div>
-          <div id="key_j" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">J</span>
-          </div>
-          <div id="key_k" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">K</span>
-          </div>
-          <div id="key_l" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">L</span>
-          </div>
-        </div>
-        <div class="keyboard-row key-row-3">
-          <div id="key_enter" class="keyboard-key keyboard-key_util keyboard-key_enter">ENTER</div>
-          <div id="key_z" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">Z</span>
-          </div>
-          <div id="key_x" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">X</span>
-          </div>
-          <div id="key_c" class="keyboard-key">
-            <div class="light"></div>
-            <span class="letter">C</span>
-          </div>
-          <div id="key_v" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">V</span>
-          </div>
-          <div id="key_b" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">B</span>
-          </div>
-          <div id="key_n" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">N</span>
-          </div>
-          <div id="key_m" class="keyboard-key">
-
-              <div class="light"></div>
-
-            <span class="letter">M</span>
-          </div>
-          <div id="key_delete" class="keyboard-key keyboard-key_util keyboard-key_delete">DELETE</div>
-       </div>
-
-
-      </div>
-    </div> -->
   </body>
 
 </html>
